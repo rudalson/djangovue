@@ -1,15 +1,32 @@
 
 
-django & vue.js sample
-pycharm에서 django project를 create 해준다.
+# django & vue.js sample
+pycharm에서 django project를 create 한다.
+그런 후 아래의 명령으로 `migrate`를 해주면 필요한 `Django`에서 필요한 최소의 파일구성은 마친다.
 
 ```shell script
 $ python manage.py migrate
 ```
 
 
-##2 Creating The VueJS Webpack Frontend Project
+### 2 Creating The VueJS Webpack Frontend Project
 
-https://github.com/vuejs-templates 에서 webpack-simple 선택
+[vuejs-templates](https://github.com/vuejs-templates) 에서 [webpack-simple](https://github.com/vuejs-templates/webpack-simple) 선택한다.
+이곳에서 Usage에 나온 내용대로 명령을 입력한다.
 
-https://github.com/vuejs-templates/webpack-simple
+```shell script
+$ npm install -g vue-cli
+$ vue init webpack-simple my-project
+$ cd my-project
+$ npm install
+$ npm run dev
+```
+
+### 3 Configuring Django Webpack Loader
+```shell script
+$ pip install django-webpack-loader
+```
+[django-webpack-loader](https://github.com/owais/django-webpack-loader) 를 설치해준다.
+
+
+
