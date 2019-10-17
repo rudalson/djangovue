@@ -77,3 +77,12 @@ $ python manage.py createsuperuser
 $ pip install djangorestframework
 ```
 
+### 8 Install and Configure Axios and app URLs
+1. Configure urls on the backend
+1. Install and configure axios on the vue frontend
+
+axios 를 설치하기 위해서는 
+```shell script
+$ cd frontend
+$ npm install axios
+```
