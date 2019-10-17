@@ -38,3 +38,11 @@ $ npm install --save-dev webpack-bundle-tracker
 ```
 
 [write-file-webpack-plugin](https://github.com/gajus/write-file-webpack-plugin) 설치
+
+
+###5 Setup Django URLs and Link the Backend with VueJS Fr
+vuejs 와 django를 연계한 이후 
+```shell script
+$ npm run dev
+```
+를 먼저 한 이후 django를 실행해 준다.

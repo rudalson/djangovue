@@ -1,13 +1,1 @@
-{
-  "status": "done",
-  "publicPath": "/dist/",
-  "chunks": {
-    "main": [
-      {
-        "name": "build.js",
-        "publicPath": "/dist/build.js",
-        "path": "$HOME/repo/djangovue/frontend/dist/build.js"
-      }
-    ]
-  }
-}
+{"status":"done","publicPath":"http://localhost:8080/dist/","chunks":{"main":[{"name":"build.js","publicPath":"http://localhost:8080/dist/build.js","path":"/Users/kmpak/repo/djangovue/frontend/dist/build.js"}]}}
