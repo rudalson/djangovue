@@ -1,3 +1,17 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from rest_framework.permissions import IsAuthenticated
 
-# Create your views here.
+from vuenote.models import Note
+from vuenote.serializers import NoteSerializer
+
+
+# Note viewset
+# Create, edit or display our notes via the API
+class NoteViewSet(viewsets.ModelViewSet):
+    # check permissions
+    permission_classes = (
+        IsAuthenticated,
+    )
+    queryset = Note.objects.all()
+    serializer_class = NoteSerializer
+    lookup_field = 'id'

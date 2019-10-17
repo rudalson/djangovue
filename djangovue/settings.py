@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'webpack_loader',
     'vuenote',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -133,4 +134,14 @@ WEBPACK_LOADER = {
         'TIMEOUT': None,
         'IGNORE': [r'.+\.hot-update.js', r'.+\.map']
     }
+}
+
+
+# Rest config
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
 }

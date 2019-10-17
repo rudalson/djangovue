@@ -65,3 +65,15 @@ $ python manage.py createsuperuser
 ```
 
 이후 admin 페이지에 들어가보면 [vuenote](http://127.0.0.1:8000/admin/vuenote/) 링크가 생긴 것을 확인할 수 있다.
+
+### 7 Install and Configure REST, serializers and note view
+이 장에서 할 내용은 아래와 같다.
+1. Install REST Framework
+1. Configure REST
+1. Create model serializers
+
+먼저 [django-rest-framework](https://www.django-rest-framework.org/) 에서 [installation](https://www.django-rest-framework.org/#installation) 의 내용에서 `djangorestframework` 를 설치해준다.
+```shell script
+$ pip install djangorestframework
+```
+
