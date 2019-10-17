@@ -29,7 +29,7 @@ $ pip install django-webpack-loader
 [django-webpack-loader](https://github.com/owais/django-webpack-loader) 를 설치해준다.
 
 
-###4 Setup Webpack Bundle Tracker & Write File Plugin
+### 4 Setup Webpack Bundle Tracker & Write File Plugin
 [webpack-bundle-tracker](https://github.com/owais/webpack-bundle-tracker) 설치
 
 ```shell script
@@ -40,9 +40,28 @@ $ npm install --save-dev webpack-bundle-tracker
 [write-file-webpack-plugin](https://github.com/gajus/write-file-webpack-plugin) 설치
 
 
-###5 Setup Django URLs and Link the Backend with VueJS Fr
+### 5 Setup Django URLs and Link the Backend with VueJS Fr
 vuejs 와 django를 연계한 이후 
 ```shell script
 $ npm run dev
 ```
 를 먼저 한 이후 django를 실행해 준다.
+
+### 6 Create Our VueNote Django App and Models
+```shell script
+$ python manage.py startapp vuenote
+```
+를 해주면 vuenote라는 디렉토리가 생긴다.
+
+이후 모델을 만든 후에는 `migration`을 해주어야 한다.
+```shell script
+$ python manage.py makemigrations
+$ python manage.py migrate
+```
+
+그리고 `admin` 접속을 위해서 user를 생성해준다.
+```shell script
+$ python manage.py createsuperuser
+```
+
+이후 admin 페이지에 들어가보면 [vuenote](http://127.0.0.1:8000/admin/vuenote/) 링크가 생긴 것을 확인할 수 있다.
