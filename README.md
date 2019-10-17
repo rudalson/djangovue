@@ -29,4 +29,12 @@ $ pip install django-webpack-loader
 [django-webpack-loader](https://github.com/owais/django-webpack-loader) 를 설치해준다.
 
 
+###4 Setup Webpack Bundle Tracker & Write File Plugin
+[webpack-bundle-tracker](https://github.com/owais/webpack-bundle-tracker) 설치
 
+```shell script
+$ cd frontend
+$ npm install --save-dev webpack-bundle-tracker
+```
+
+[write-file-webpack-plugin](https://github.com/gajus/write-file-webpack-plugin) 설치

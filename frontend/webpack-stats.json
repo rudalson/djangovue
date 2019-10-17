@@ -1,0 +1,13 @@
+{
+  "status": "done",
+  "publicPath": "/dist/",
+  "chunks": {
+    "main": [
+      {
+        "name": "build.js",
+        "publicPath": "/dist/build.js",
+        "path": "$HOME/repo/djangovue/frontend/dist/build.js"
+      }
+    ]
+  }
+}
