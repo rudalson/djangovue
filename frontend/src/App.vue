@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <form>
+    <form @submit.prevent="submitNote">
       <label>Title</label>
       <input type="text" v-model="formData.title"/>
       <label>Content</label>
@@ -13,15 +13,27 @@
 </template>
 
 <script>
+    import api from './api/index'
+
     export default {
         name: 'app',
         data() {
             return {
-                msg: 'Welcome to Your Vue.js App',
+                msg: '',
                 formData: {
                     title: '',
                     content: ''
                 }
+            }
+        },
+
+        methods: {
+            submitNote() {
+                api.fetchNotes('post', null, this.formData).then(res => {
+                    this.msg = 'Saved'
+                }).catch((e) => {
+                    this.msg = e.response
+                })
             }
         }
     }
@@ -71,7 +83,7 @@
     display: block;
   }
 
-  button{
+  button {
     background: #000;
     color: #fff;
     border-radius: 3px;

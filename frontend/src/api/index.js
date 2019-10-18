@@ -2,7 +2,10 @@ import axios from 'axios'
 
 export default {
   fetchNotes (method, params, data) {
-    return ajax('api/v1/notes', 'get', null, null)
+    if (method === 'post') {
+      return ajax('api/notes/', method, {data})
+    }
+    return ajax('api/notes/', 'get', null, null)
   }
 }
 
@@ -14,7 +17,7 @@ export default {
  * @returns
  */
 function ajax(url, method, options) {
-  if (option !== undefined) {
+  if (options !== undefined) {
     var {params = {}, data = {}} = options
   } else {
     params = data = {}
