@@ -5,7 +5,7 @@ export default {
     if (method === 'post') {
       return ajax('api/notes/', method, {data})
     }
-    return ajax('api/notes/', 'get', null, null)
+    return ajax('api/notes/', 'get', {})
   }
 }
 

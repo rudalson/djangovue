@@ -9,6 +9,16 @@
       <br/>
       <button type="submit">Submit</button>
     </form>
+
+    <br/>
+    <h1>All notes</h1>
+    <ul>
+      <li v-for="(note, index) in notes" :key="index">
+        <h3>{{note.title}}</h3>
+        <h5>Created on {{note.created}}</h5>
+        <p>{{note.content}}</p>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -23,7 +33,8 @@
                 formData: {
                     title: '',
                     content: ''
-                }
+                },
+                notes: []
             }
         },
 
@@ -34,7 +45,20 @@
                 }).catch((e) => {
                     this.msg = e.response
                 })
+            },
+            fetchAllNotes() {
+                api.fetchNotes('get', null, null).then(res => {
+                    this.notes = res.data
+                    // check log data
+                    console.log(this.notes)
+                }).catch((e) => {
+                    console.log(e)
+                })
             }
+        },
+        mounted() {
+            // fetch all notes once component is mounted
+            this.fetchAllNotes()
         }
     }
 </script>
